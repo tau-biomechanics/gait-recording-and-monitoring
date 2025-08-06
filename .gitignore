@@ -68,6 +68,7 @@ tmp/
 temp/
 *.tmp
 *._
+._*
 
 # IDE and editor files
 .vscode/
