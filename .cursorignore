@@ -1,0 +1,17 @@
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+.venv/
+qtm_env/
+*.csv
+*.mot
+*.mot.gz
+*.mot.gz.part
+*.mot.gz.part.1
+*.mot.gz.part.2
+*.mot.gz.part.3
+*.mot.gz.part.4
+*.mot.gz.part.5
+*.mot.gz.part.6
+*.mot.gz.part.7
+*.mot.gz.part.8
+*.mot.gz.part.9
+*._

@@ -1,0 +1,91 @@
+=== OpenCap Data Information ===
+Number of rows: 2982
+Number of columns: 34
+Columns: ['time', 'pelvis_tilt', 'pelvis_list', 'pelvis_rotation', 'pelvis_tx', 'pelvis_ty', 'pelvis_tz', 'hip_flexion_r', 'hip_adduction_r', 'hip_rotation_r', 'knee_angle_r', 'ankle_angle_r', 'subtalar_angle_r', 'mtp_angle_r', 'hip_flexion_l', 'hip_adduction_l', 'hip_rotation_l', 'knee_angle_l', 'ankle_angle_l', 'subtalar_angle_l', 'mtp_angle_l', 'lumbar_extension', 'lumbar_bending', 'lumbar_rotation', 'arm_flex_r', 'arm_add_r', 'arm_rot_r', 'elbow_flex_r', 'pro_sup_r', 'arm_flex_l', 'arm_add_l', 'arm_rot_l', 'elbow_flex_l', 'pro_sup_l']
+Time range: 0.0 to 49.6833333 seconds
+Data types:
+time                float64
+pelvis_tilt         float64
+pelvis_list         float64
+pelvis_rotation     float64
+pelvis_tx           float64
+pelvis_ty           float64
+pelvis_tz           float64
+hip_flexion_r       float64
+hip_adduction_r     float64
+hip_rotation_r      float64
+knee_angle_r        float64
+ankle_angle_r       float64
+subtalar_angle_r    float64
+mtp_angle_r         float64
+hip_flexion_l       float64
+hip_adduction_l     float64
+hip_rotation_l      float64
+knee_angle_l        float64
+ankle_angle_l       float64
+subtalar_angle_l    float64
+mtp_angle_l         float64
+lumbar_extension    float64
+lumbar_bending      float64
+lumbar_rotation     float64
+arm_flex_r          float64
+arm_add_r           float64
+arm_rot_r           float64
+elbow_flex_r        float64
+pro_sup_r           float64
+arm_flex_l          float64
+arm_add_l           float64
+arm_rot_l           float64
+elbow_flex_l        float64
+pro_sup_l           float64
+dtype: object
+
+First 5 rows:
+       time  pelvis_tilt  pelvis_list  pelvis_rotation  pelvis_tx  pelvis_ty  ...  pro_sup_r  arm_flex_l  arm_add_l  arm_rot_l  elbow_flex_l  pro_sup_l
+0  0.000000    -9.670803     0.529092        -0.924530  -3.823580   1.194713  ...  86.492729  -15.482605 -17.285365   1.937887     70.751354  85.923820
+1  0.016667   -11.495220    -0.540261         2.258017  -3.812701   1.184982  ...  86.541737  -16.390974 -16.781768  -0.070566     65.449943  85.553681
+2  0.033333   -11.714855    -0.643073         3.906125  -3.813928   1.180566  ...  87.431559  -11.259479 -18.845413   7.263697     57.611421  85.059314
+3  0.050000   -12.023039    -0.594583         4.711907  -3.815852   1.178382  ...  87.542349  -10.930694 -19.264012   7.732289     55.209481  84.429153
+4  0.066667   -12.404073    -0.517691         5.002222  -3.815878   1.177714  ...  87.512068  -10.305871 -18.980869   8.107345     53.859285  83.973752
+
+[5 rows x 34 columns]
+
+=== QTM Data Information ===
+Number of rows: 3021
+Number of columns: 71
+Columns: ['Frame', 'Timestamp', 'Marker1_X', 'Marker1_Y', 'Marker1_Z', 'Marker2_X', 'Marker2_Y', 'Marker2_Z', 'Marker3_X', 'Marker3_Y', 'Marker3_Z', 'Marker4_X', 'Marker4_Y', 'Marker4_Z', 'Marker5_X', 'Marker5_Y', 'Marker5_Z', 'Marker6_X', 'Marker6_Y', 'Marker6_Z', 'Marker7_X', 'Marker7_Y', 'Marker7_Z', 'Marker8_X', 'Marker8_Y', 'Marker8_Z', 'Marker9_X', 'Marker9_Y', 'Marker9_Z', 'Marker10_X', 'Marker10_Y', 'Marker10_Z', 'Marker11_X', 'Marker11_Y', 'Marker11_Z', 'Marker12_X', 'Marker12_Y', 'Marker12_Z', 'Marker13_X', 'Marker13_Y', 'Marker13_Z', 'Marker14_X', 'Marker14_Y', 'Marker14_Z', 'Marker15_X', 'Marker15_Y', 'Marker15_Z', 'Marker16_X', 'Marker16_Y', 'Marker16_Z', 'Marker17_X', 'Marker17_Y', 'Marker17_Z', 'Marker18_X', 'Marker18_Y', 'Marker18_Z', 'Marker19_X', 'Marker19_Y', 'Marker19_Z', 'Marker20_X', 'Marker20_Y', 'Marker20_Z', 'ForcePlate1_ForceX', 'ForcePlate1_ForceY', 'ForcePlate1_ForceZ', 'ForcePlate1_MomentX', 'ForcePlate1_MomentY', 'ForcePlate1_MomentZ', 'ForcePlate1_CoPX', 'ForcePlate1_CoPY', 'ForcePlate1_CoPZ']
+
+NaN count per column (first 20 columns):
+Frame: 0 NaNs (0.00%)
+Timestamp: 0 NaNs (0.00%)
+Marker1_X: 336 NaNs (11.12%)
+Marker1_Y: 336 NaNs (11.12%)
+Marker1_Z: 336 NaNs (11.12%)
+Marker2_X: 240 NaNs (7.94%)
+Marker2_Y: 240 NaNs (7.94%)
+Marker2_Z: 240 NaNs (7.94%)
+Marker3_X: 159 NaNs (5.26%)
+Marker3_Y: 159 NaNs (5.26%)
+Marker3_Z: 159 NaNs (5.26%)
+Marker4_X: 251 NaNs (8.31%)
+Marker4_Y: 251 NaNs (8.31%)
+Marker4_Z: 251 NaNs (8.31%)
+Marker5_X: 204 NaNs (6.75%)
+Marker5_Y: 204 NaNs (6.75%)
+Marker5_Z: 204 NaNs (6.75%)
+Marker6_X: 242 NaNs (8.01%)
+Marker6_Y: 242 NaNs (8.01%)
+Marker6_Z: 242 NaNs (8.01%)
+
+Columns with >50% valid data: 71/71
+First 20 valid columns: ['Frame', 'Timestamp', 'Marker1_X', 'Marker1_Y', 'Marker1_Z', 'Marker2_X', 'Marker2_Y', 'Marker2_Z', 'Marker3_X', 'Marker3_Y', 'Marker3_Z', 'Marker4_X', 'Marker4_Y', 'Marker4_Z', 'Marker5_X', 'Marker5_Y', 'Marker5_Z', 'Marker6_X', 'Marker6_Y', 'Marker6_Z']
+...
+
+First 5 rows of first 10 valid columns:
+   Frame  Timestamp    Marker1_X   Marker1_Y    Marker1_Z    Marker2_X   Marker2_Y    Marker2_Z    Marker3_X   Marker3_Y
+0     30     483333  1996.312988  137.226334  1015.237244  2183.503662  218.903824  1064.456665  2184.944092  306.301117
+1     31     500000  1996.527954  137.434601  1015.222107  2183.491455  218.918518  1064.463989  2184.963867  306.343231
+2     32     516666  1996.270508  137.678619  1015.326721  2183.487305  218.949738  1064.454834  2185.104492  306.367737
+3     33     533333  1996.080444  137.864899  1015.347595  2183.471191  218.962646  1064.461548  2185.145020  306.425964
+4     34     550000  1996.109375  138.013489  1015.337341  2183.433350  219.014023  1064.439453  2185.181396  306.518524
+

@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+.env
+venv/
+ENV/
+env/
+qtm_env/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Data files
+data/
+*.csv
+*.trc
+*.json
+*.mat
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Video files
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.wmv
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+
+# Plot outputs
+plots/
+comparison_plots/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*._
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+
+# Logs
+*.log
+logs/
+
+# Model files
+*.pth
+*.onnx
+model.h5
+
+# OpenCap data
+opencap_data/
+
+# Installer files
+*.sh
+*.exe
+*.msi

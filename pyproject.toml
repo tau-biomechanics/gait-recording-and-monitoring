@@ -1,0 +1,24 @@
+[project]
+name = "sync-recording"
+version = "0.1.0"
+description = "Biomechanical sync recording project"
+requires-python = ">=3.8"
+dependencies = [
+    "ruff>=0.5.3",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "opencv-python",
+    "opensim",
+    "PyQt6>=6.0.0",
+    "pyinstaller>=6.0.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+select = ["E", "F", "I", "N", "W", "B", "UP", "PL", "RUF"]
+ignore = []
+
+[tool.ruff.isort]
+known-first-party = ["src"] 

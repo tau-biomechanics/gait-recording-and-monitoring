@@ -1,0 +1,103 @@
+name: Build and Release Executables
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Executables
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            executable_name: QTM_Insole_Recorder.exe
+            spec_file: QTM_Insole_Recorder_Windows.spec
+            artifact_name: QTM_Insole_Recorder-windows
+          - os: macos-latest
+            executable_name: QTM_Insole_Recorder
+            spec_file: QTM_Insole_Recorder.spec
+            artifact_name: QTM_Insole_Recorder-macos
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Build executable with PyInstaller
+      run: |
+        pyinstaller ${{ matrix.spec_file }} --clean
+
+    - name: Rename executable (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        move dist\QTM_Insole_Recorder.exe dist\${{ matrix.artifact_name }}.exe
+      shell: cmd
+
+    - name: Rename executable (macOS)
+      if: matrix.os == 'macos-latest'
+      run: |
+        mv dist/QTM_Insole_Recorder dist/${{ matrix.artifact_name }}
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ matrix.artifact_name }}
+        path: |
+          dist/${{ matrix.artifact_name }}*
+
+  release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Download Windows artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: QTM_Insole_Recorder-windows
+
+    - name: Download macOS artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: QTM_Insole_Recorder-macos
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          QTM_Insole_Recorder-windows.exe
+          QTM_Insole_Recorder-macos
+        name: Release ${{ github.ref_name }}
+        body: |
+          ## QTM Insole Recorder ${{ github.ref_name }}
+          
+          ### Downloads
+          - **Windows**: `QTM_Insole_Recorder-windows.exe`
+          - **macOS**: `QTM_Insole_Recorder-macos`
+          
+          ### Installation
+          No installation required - just download and run the executable for your platform.
+          
+          ### Usage
+          The executables are standalone and include all dependencies.
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
