@@ -3,3 +3,4 @@ PyQt6>=6.0.0
 pyqtgraph>=0.13.0
 numpy>=1.21.0
 pyinstaller>=6.0.0
+qtm_rt
