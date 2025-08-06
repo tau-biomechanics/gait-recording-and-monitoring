@@ -1,8 +1,12 @@
-ruff>=0.5.3
-numpy
-pandas
-matplotlib
-opencv-python
-opensim
+# Core dependencies for GUI application
 PyQt6>=6.0.0
+pyqtgraph>=0.13.0
+numpy
 pyinstaller>=6.0.0
+
+# Optional dependencies (may not be available on all platforms)
+# pandas
+# matplotlib
+# opencv-python
+# opensim
+# ruff>=0.5.3
